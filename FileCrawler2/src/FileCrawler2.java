@@ -7,13 +7,13 @@ public class FileCrawler2 {
         new FileCrawler2();
     }
 
-    public FileCrawler2() {
+    private FileCrawler2() {
         File input = new File(".");
         List<File> result = search(input);
         result.forEach(System.out::println);
     }
 
-    public List<File> search(File input) {
+    private List<File> search(File input) {
 
         List<File> result = new ArrayList<>();
         File[] files = input.listFiles();

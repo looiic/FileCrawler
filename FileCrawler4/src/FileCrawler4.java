@@ -7,7 +7,7 @@ public class FileCrawler4 {
         new FileCrawler4(args);
     }
 
-    public FileCrawler4(String[] filter) {
+    private FileCrawler4(String[] filter) {
         File input = new File(".");
         long filterSizeByte = 0;
         if(filter.length >= 1){
@@ -21,7 +21,7 @@ public class FileCrawler4 {
         result.forEach(System.out::println);
     }
 
-    public List<File> search(File input, long filterSizeBytes) {
+    private List<File> search(File input, long filterSizeBytes) {
 
         List<File> result = new ArrayList<>();
         if(filterFilesize(input, filterSizeBytes)) {
@@ -41,8 +41,7 @@ public class FileCrawler4 {
 
     private boolean filterFilesize(File file, long filterSizeBytes) {
         if(!file.isDirectory() && filterSizeBytes == 0) return true;
-        if(!file.isDirectory() && file.length() <= filterSizeBytes) return true;
-        return false;
+        return (!file.isDirectory() && file.length() <= filterSizeBytes);
     }
 
 

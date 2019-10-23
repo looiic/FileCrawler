@@ -6,15 +6,11 @@ public class FilterType implements Filter {
 
     private List<String> filterType;
 
-    public FilterType() {
+    FilterType() {
         this.filterType = new ArrayList<>();
     }
 
-    public FilterType(List<String> filterType) {
-        this.filterType = filterType;
-    }
-
-    public void addFilter(String filter){
+    void addFilter(String filter){
         filterType.add(filter);
     }
 

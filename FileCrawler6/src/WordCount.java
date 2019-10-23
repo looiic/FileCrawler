@@ -6,10 +6,10 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
-public class WordCount {
+class WordCount {
 
 
-    public void wordCount(List<File> files, HashMap<String, Integer> output) {
+    void wordCount(List<File> files, HashMap<String, Integer> output) {
         for (File file : files) {
             try {
                 List<String> lines = Files.readAllLines(Paths.get(file.getPath()), StandardCharsets.UTF_8);

@@ -7,13 +7,13 @@ public class FileCrawler3 {
         new FileCrawler3(args);
     }
 
-    public FileCrawler3(String[] filter) {
+    private FileCrawler3(String[] filter) {
         File input = new File(".");
         List<File> result = search(input, filter);
         result.forEach(System.out::println);
     }
 
-    public List<File> search(File input, String[] filter) {
+    private List<File> search(File input, String[] filter) {
 
         List<File> result = new ArrayList<>();
         File[] files = input.listFiles();

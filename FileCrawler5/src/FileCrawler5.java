@@ -7,14 +7,14 @@ public class FileCrawler5 {
         new FileCrawler5(args);
     }
 
-    public FileCrawler5(String[] args) {
+    private FileCrawler5(String[] args) {
         List<Filter> filters = getFiltersForArgs(args);
         File input = new File(".");
         List<File> result = search(input, filters);
         result.forEach(System.out::println);
     }
 
-    public List<File> search(File input, List<Filter> filters) {
+    private List<File> search(File input, List<Filter> filters) {
 
         List<File> result = new ArrayList<>();
         boolean isFileFiltered = false;

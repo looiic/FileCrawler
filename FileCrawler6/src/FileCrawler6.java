@@ -8,9 +8,9 @@ public class FileCrawler6 {
         new FileCrawler6(args);
     }
 
-    HashMap<String, Integer> wordsToSearch;
+    private HashMap<String, Integer> wordsToSearch;
 
-    public FileCrawler6(String[] args) {
+    private FileCrawler6(String[] args) {
         wordsToSearch = new HashMap<>();
         List<Filter> filters = getFiltersForArgs(args);
         File input = new File(".");
@@ -25,7 +25,7 @@ public class FileCrawler6 {
         }
     }
 
-    public List<File> search(File input, List<Filter> filters) {
+    private List<File> search(File input, List<Filter> filters) {
 
         List<File> result = new ArrayList<>();
         boolean isFileFiltered = false;
